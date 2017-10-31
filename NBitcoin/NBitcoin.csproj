@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Company>Metaco SA</Company>
+		<Copyright>Copyright © Metaco SA 2017</Copyright>
+		<Description>The C# Bitcoin Library</Description>
+	</PropertyGroup>
+	<PropertyGroup>
+        <Version>4.0.0.12</Version>
+    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard1.3;netstandard1.1</TargetFrameworks>
+    <NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DocumentationFile>bin\Release\NBitcoin.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <DefineConstants>$(DefineConstants);WIN</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <DefineConstants>$(DefineConstants);NETCORE;NOTRACESOURCE;NOCUSTOMSSLVALIDATION</DefineConstants>
+  </PropertyGroup>
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+     <DefineConstants>$(DefineConstants);NETCORE;PORTABLE;NOTRACESOURCE;NOCUSTOMSSLVALIDATION;NOSTRNORMALIZE;NOSOCKET;NOFILEIO;USEBC;NODEFAULTRNG;NODYNAMIC;NOX509</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+	  <PackageReference Include="System.Net.Http" Version="4.3.2" />
+    
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+    <PackageReference Include="System.Globalization.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Csp" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(DefineConstants.Contains('NOTRACESOURCE'))">
+    <Compile Include="..\Stubs\TraceStub\TraceSource.cs" />
+  </ItemGroup>
+
+	
+  <ItemGroup>
+	<None Update="BitcoinStream.Partial.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BitcoinStream.Partial.cs</LastGenOutput>
+    </None>
+	<None Update="UInt2561.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt2561.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>
