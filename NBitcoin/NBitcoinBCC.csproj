@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Company>Metaco SA</Company>
-		<Copyright>Copyright © Metaco SA 2017</Copyright>
-		<Description>The C# Bitcoin Library</Description>
+		<Company>Not Applicable(Forked from NBitcoin)</Company>
+		<Copyright>Copyright © 2017 (Forked from NBitcoin)</Copyright>
+		<Description>The C# Bitcoin Library for Bitcoin Cash</Description>
 	</PropertyGroup>
 	<PropertyGroup>
         <Version>4.0.0.12</Version>
@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DocumentationFile>bin\Release\NBitcoin.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\NBitcoinBCC.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <DefineConstants>$(DefineConstants);WIN</DefineConstants>
