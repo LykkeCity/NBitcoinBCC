@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Company>Not Applicable(Forked from NBitcoin)</Company>
-		<Copyright>Copyright © 2017 (Forked from NBitcoin)</Copyright>
+		<Company>Metaco SA (For original version)</Company>
+		<Copyright>Copyright © Metaco SA 2017 (For original NBitcoin)</Copyright>
 		<Description>The C# Bitcoin Library for Bitcoin Cash</Description>
 	</PropertyGroup>
 	<PropertyGroup>
