@@ -749,7 +749,7 @@ namespace NBitcoin
 			// The message start string is designed to be unlikely to occur in normal data.
 			// The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 			// a large 4-byte int at any alignment.
-			magic = 0xD9B4BEF9;
+			magic = 0xE8F3E1E3;
 			vAlertPubKey = Encoders.Hex.DecodeData("04fc9702847840aaf195de8442ebecedf5b095cdbb9bc716bda9110971b28a49e0ead8564ff0db22209e0374782c093bb899692d524e9d6a6956e7c5ecbcd68284");
 			nDefaultPort = 8333;
 			nRPCPort = 8332;
@@ -844,7 +844,7 @@ namespace NBitcoin
 
 			consensus.CoinType = 1;
 
-			magic = 0x0709110B;
+			magic = 0xF4F3E5F4;
 
 			vAlertPubKey = DataEncoders.Encoders.Hex.DecodeData("04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a");
 			nDefaultPort = 18333;
@@ -899,7 +899,7 @@ namespace NBitcoin
 			consensus.RuleChangeActivationThreshold = 108;
 			consensus.MinerConfirmationWindow = 144;
 
-			magic = 0xDAB5BFFA;
+			magic = 0xFABFB5DA;
 
 			consensus.BIP9Deployments[BIP9Deployments.TestDummy] = new BIP9DeploymentsParameters(28, 0, 999999999);
 			consensus.BIP9Deployments[BIP9Deployments.CSV] = new BIP9DeploymentsParameters(0, 0, 999999999);
